@@ -12,8 +12,7 @@ type Props = {
 
 export const Editor: FunctionComponent<Props> = ({ value, onChange }) => {
   const currentTheme = useTheme();
-  const [editor, setEditor] =
-    useState<monaco.editor.IStandaloneCodeEditor | null>(null);
+  const [editor, setEditor] = useState<monaco.editor.IStandaloneCodeEditor | null>(null);
   const monacoEl = useRef(null);
 
   useEffect(() => {
@@ -28,6 +27,7 @@ export const Editor: FunctionComponent<Props> = ({ value, onChange }) => {
             enabled: false,
           },
           fontSize: 20,
+          fontFamily: "JetBrains Mono",
           padding: {
             top: 20,
             bottom: 20,
